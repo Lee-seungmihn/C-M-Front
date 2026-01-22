@@ -282,3 +282,7 @@ li:after {
     font-size: 13.6px !important;
     height: 54px;
 }
+
+.wedget-close {
+    display: none;
+}

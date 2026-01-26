@@ -1,0 +1,556 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    color: #ffffff;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+}
+
+body {
+    --font-family: 'Inter', 'Inter Fallback';
+    font-family: var(--font-family), sans-serif;
+    font-size: 14px;
+}
+
+img {
+    border-style: none;
+}
+
+h1 {
+    display: block;
+}
+
+[id="__next"] {
+    height: auto;
+    min-height: 100%;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    appearance: button;
+}
+
+button {
+    text-transform: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.funding-regist-container {
+    display: flex;
+    background: rgb(0, 0, 0);
+    direction: ltr;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.funding-regist-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.funding-regist-banner-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.funding-regist-banner {
+    object-fit: cover;
+    object-position: center 50%;
+    width: 35%;
+    height: 25vh;
+}
+
+.funding-regist-section {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 100%;
+    margin: 0px auto;
+    max-width: min(600px, -200px + 100vw);
+}
+
+progress {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    vertical-align: baseline;
+}
+
+.funding-regist-from-container {
+    margin-bottom: 100px;
+}
+
+.funding-regist-form-title-wrapper {
+    position: relative;
+    padding: 1px 0px;
+    white-space: pre-line;
+    word-break: break-word;
+    height: 121px;
+}
+
+.funding-regist-form-title {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    padding-bottom: 2.5rem;
+    margin: 0px;
+    height: 119px;
+    top: -35%
+}
+
+
+.funding-regist-form-content-wrapper {
+    padding: 1px 0px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    height: 55px;
+    position: relative;
+}
+
+.funding-regist-form-content {
+    position: absolute;
+    line-height: 1.5;
+    min-height: 35px;
+    padding-top: 3px;
+    padding-bottom: 8px;
+    height: 53px;
+    top: -31%;
+    left: -19%;
+    
+
+}
+
+.funding-regist-form-separator-wrapper {
+    position: relative;
+    padding: 1px 0px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    height: 37px;
+}
+
+.funding-regist-form-separator {
+    padding: 17px 0px;
+    height: 35px;
+    position: absolute;
+    width: 600px;
+    top: -30%;
+}
+
+.funding-regist-form-separator-line {
+    position: absolute;
+    width: 600px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.09);
+    border: 0px;
+    top: 50%;
+}
+
+
+.funding-regist-form-tab-title {
+    margin: 0px;
+    margin-top: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-right: 5px;
+}
+
+.funding-regist-form-ex-wrapper {
+    margin-top: 10px;
+}
+
+.funding-regist-form-ex {
+    line-height: 1.5;
+    min-height: 35px;
+    padding-top: 3px;
+    padding-bottom: 8px;
+}
+
+.funding-regist-form-input-wrapper {
+    padding: 1px 0px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-bottom: 8px;
+}
+
+.funding-regist-form-input {
+    margin-top:15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 95%;
+    height: 48px;
+    padding: 0px 16px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+    border: 0px;
+    border-radius: 12px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.055);
+    color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+}
+
+.funding-regist-form-input-finalvalue-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 320px;
+    width: 100%;
+    min-width: 100%;
+}
+
+.funding-regist-form-input-finalvalue {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgb(217, 128, 136);
+}
+
+.funding-regist-form-input-finalvalue {
+    display: none;
+}
+
+.funding-regist-form-tab-title-icon-wrap {
+    position: relative;
+    width: 48%;
+}
+
+.funding-regist-form-tab-title-icon {
+    position: absolute;
+    inset: 6px -8px auto auto;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 50%;
+    background-color: rgb(15, 15, 15);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+    cursor: pointer;
+}
+
+.funding-regist-form-tab-title-alter {
+    position: absolute;
+    display: inline-block;
+    max-width: calc(-32px + 100vw);
+    z-index: 999;
+    border-radius: 4px;
+    padding: 4px 8px;
+    transition: opacity 0.2s ease-out;
+    pointer-events: none;
+    line-height: 16px;
+    font-family: var(--font-family), sans-serif;
+    text-transform: none;
+    text-align: center;
+    opacity: 0;
+    visibility: visible;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: white !important;
+    background: rgb(0, 0, 0) !important;
+    white-space: nowrap !important;
+}
+
+.funding-regist-form-tab-spanBox {
+    line-height: 0.5;
+    min-height: 35px;
+    padding-top: 3px;
+    padding-bottom: calc(8px);
+    padding: 1px 0px;
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+.funding-regist-form-fileUpload-wrapper {
+    padding: 1px 0px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.funding-regist-form-fileUpload {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.055);
+    cursor: pointer;
+    border: 1px dashed rgb(87, 87, 87);
+    border-radius: 12px;
+}
+
+.funding-regist-form-fileUpload-inner {
+    flex-shrink: 1;
+    min-width: 0px;
+    max-width: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out, border-color 100ms ease-in-out, outline 100ms ease-in-out;
+    line-height: 1;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    overflow: hidden;
+    transform: translateZ(0px);
+    border: 0px;
+    outline: none;
+    outline-offset: -1px;
+    height: 28px;
+    font-size: 14px;
+    border-radius: 7px;
+    padding: 0px 0.7em;
+    background: transparent;
+}
+
+.funding-regist-form-preview {
+    display: flex;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.funding-regist-form-fileUpload-icon {
+    font-style: normal;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    transition: opacity 100ms ease-in-out, color 100ms ease-in-out;
+    font-weight: 600;
+    transform: translateZ(0px);
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: -0.1em;
+    overflow: initial !important;
+    flex-shrink: 0 !important;
+}
+
+.funding-regist-form-fileUpload-inner-span {
+    flex-shrink: 1;
+    min-width: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    line-height: 1.2em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.funding-regist-form-memo-wrapper {
+    position: relative;
+    display: inline-flex;
+    padding-top: 1.25rem;
+    padding-bottom: 0.625rem;
+}
+
+.funding-regist-form-memo {
+    margin: 0px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-right: 5px;
+}
+
+.funding-regist-form-memo-nxt {
+    line-height: 1.5;
+    min-height: 35px;
+    padding-top: 3px;
+    padding-bottom: calc(8px);
+}
+
+.funding-regist-form-memo-value-wrapper {
+    position: relative;
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.funding-regist-form-memo-value-area {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 100%;
+    width: 100%;
+}
+
+.funding-regist-form-memo-value {
+    width: 100%;
+    max-width: 100%;
+    resize: vertical;
+    min-height: 96px;
+    padding: 17px 16px;
+    color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.055);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+    border: 0px;
+    border-radius: 12px;
+    outline: none;
+}
+
+.funding-regist-form-submit-wrapper {
+    justify-content: space-between;
+    margin: 10px 0px;
+    display: block;
+}
+
+.funding-regist-form-submit-wrapper>div {
+    display: flex;
+    min-width: 0px;
+}
+
+.funding-regist-form-submit {
+    width: 100%;
+    border-radius: 999px !important;
+    height: 48px !important;
+    appearance: button;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out, border-color 100ms ease-in-out, outline 100ms ease-in-out;
+    line-height: 1;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    overflow: hidden;
+    transform: translateZ(0px);
+    border: 0px;
+    outline: none;
+    outline-offset: -1px;
+    height: 36px;
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 0px 0.9em;
+    gap: 0.5em;
+    background: rgb(255, 255, 255);
+}
+
+.funding-regist-form-submit-text {
+    color: rgb(0, 0, 0);
+    gap: 0.5em;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    transition: opacity 100ms ease-in-out, color 100ms ease-in-out;
+    font-weight: 600;
+    transform: translateZ(0px);
+}
+
+.funding-regist-form-submit-icon-wrapper {
+    margin-right: -0.15em;
+    margin-left: -0.1em;
+    color: rgb(0, 0, 0);
+    gap: 0.5em;
+    font-style: normal;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    transition: opacity 100ms ease-in-out, color 100ms ease-in-out;
+    font-weight: 600;
+    transform: translateZ(0px);
+}
+
+.bi-arrow-right-short {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.funding-regist-form-submit-loading {
+    color: rgb(0, 0, 0);
+    gap: 0.5em;
+    position: absolute;
+    inset: 0px;
+    gap: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateZ(0px);
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    transition: opacity 100ms ease-in-out, color 100ms ease-in-out;
+    font-weight: 600;
+    transform: translateZ(0px);
+}
+
+
+@keyframes bqrFYP {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.leDWoT {
+    animation: 1.618s linear 0s infinite normal none running bqrFYP;
+    transform-origin: center center;
+    transform: translateZ(0px);
+    width: 1.2em;
+    height: 1.2em;
+    font-size: inherit;
+}
+
+@media (hover:hover) {
+    .funding-regist-form-fileUpload:hover {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, rgba(247, 247, 247, 0.08) 0px 3px 9px 0px, rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+    }
+
+    .funding-regist-form-input:hover {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, rgba(247, 247, 247, 0.08) 0px 3px 9px 0px, rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+    }
+
+    .funding-regist-form-fileUpload-wrapper:hover .funding-regist-form-fileUpload-inner {
+        background: rgba(255, 255, 255, 0.055);
+    }
+
+    .funding-regist-form-tab-title-icon:hover .funding-regist-form-tab-title-alter {
+        opacity: 1;
+    }
+}
+
+

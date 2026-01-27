@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지</title>
-    <link rel="stylesheet" href="/static/css/mypage/mypage.css">
+    <link rel="stylesheet" href="../../static/css/mypage/mypage.css">
+    <script src="../../static/js/mypage/logo-carousel.js" defer></script>
+    <script src="../../static/js/mypage/tab-switch.js" defer></script>
 </head>
 <body>
     <div class="wrap">
@@ -31,12 +33,12 @@
                             <div class="user-profile-img-wrap">
                                 <input type="file" class="profile-file">
                                 <div class="user-profile">
-                                    <img src="/static/image/default (2).webp" alt="profile-img" class="pro-img">
+                                    <img src="https://i.pravatar.cc/150?img=12" alt="profile-img" class="pro-img">
                                 </div>
                             </div>
                             <div class="user-nickname-div">
                                 <div class="user-nicknamewithcheck">
-                                    <p class="user-nickname-word">닉네임</p>
+                                    <p class="user-nickname-word">Elon Musk</p>
                                     <div class="user-nickname-check">
                                         <div class="user-nickname-check-img-wrap">
                                             <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="12" role="img" width="12" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.066 5.934a.8.8 0 0 1 0 1.132l-11 11a.8.8 0 0 1-1.131 0l-4-4a.8.8 0 0 1 1.13-1.132L8.5 16.37 18.935 5.934a.8.8 0 0 1 1.13 0" clip-rule="evenodd"></path></svg>
@@ -44,7 +46,7 @@
                                         <span class="user-certification-word">인증</span>
                                     </div>
                                 </div>
-                                <p class="user-nickname-job-word">SW 개발 · 신입</p>
+                                <p class="user-nickname-job-word">CEO at Tesla & SpaceX · 10년 이상</p>
                             </div>
                         </div>
                         <div class="user-status-wrap">
@@ -87,7 +89,187 @@
                     </div>
                 </div>
                 <div class="user-content-wrap">
-                    <div class="user-content-inner-wrap">
+                    <!-- Feed Section for "내 게시물" Tab -->
+                    <div class="feed-container" data-tab="posts" style="display: none;">
+                        <div class="feed-wrapper">
+                            <!-- Post 1: SpaceX Starship -->
+                            <div class="feed-card">
+                                <div class="feed-section">
+                                    <div class="feed-header">
+                                        <div class="fead-profile">
+                                            <div class="feed-profile-container">
+                                                <div class="feed-profile-wrapper">
+                                                    <img src="https://i.pravatar.cc/150?img=12" alt="Elon Musk">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="feed-header-info">
+                                            <div class="feed-header-info-wrapper">
+                                                <div class="feed-header-info-name-section">
+                                                    <div class="feed-header-info-name-wrapper">
+                                                        <div class="feed-header-info-name">
+                                                            <p class="name-tag">Elon Musk</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="feed-header-info-date-section">
+                                                    <p class="feed-user-stack">CEO at Tesla & SpaceX</p>
+                                                    <p class="feed-user-post-time">2시간전</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="feed-content-container">
+                                        <div class="feed-content-wrapper">
+                                            <div class="feed-content-text-section">
+                                                <div class="feed-content-text-wrapper">
+                                                    <span>화성 이주 프로젝트가 예상보다 빠르게 진행되고 있습니다. Starship의 최신 테스트에서 놀라운 성과를 거뒀고, 이제 우리는 인류를 다행성 종으로 만드는 목표에 한 발 더 다가갔습니다. 지속 가능한 에너지와 우주 탐사, 이 두 가지가 인류의 미래를 결정할 것입니다.</span>
+                                                </div>
+                                            </div>
+                                            <div class="feed-content-image-container">
+                                                <div class="feed-content-image-wrapper">
+                                                    <div class="feed-content-image-section">
+                                                        <div class="feed-content-image-box">
+                                                            <img class="feed-content-image" src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=800&h=800&fit=crop" alt="SpaceX Starship">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 2: Tesla AI -->
+                            <div class="feed-card">
+                                <div class="feed-section">
+                                    <div class="feed-header">
+                                        <div class="fead-profile">
+                                            <div class="feed-profile-container">
+                                                <div class="feed-profile-wrapper">
+                                                    <img src="https://i.pravatar.cc/150?img=12" alt="Elon Musk">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="feed-header-info">
+                                            <div class="feed-header-info-wrapper">
+                                                <div class="feed-header-info-name-section">
+                                                    <div class="feed-header-info-name-wrapper">
+                                                        <div class="feed-header-info-name">
+                                                            <p class="name-tag">Elon Musk</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="feed-header-info-date-section">
+                                                    <p class="feed-user-stack">CEO at Tesla & SpaceX</p>
+                                                    <p class="feed-user-post-time">5시간전</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="feed-content-container">
+                                        <div class="feed-content-wrapper">
+                                            <div class="feed-content-text-section">
+                                                <div class="feed-content-text-wrapper">
+                                                    <span>Tesla의 Full Self-Driving (FSD) 베타 버전이 새로운 이정표에 도달했습니다. AI가 이제 도시 거리에서 인간 운전자보다 안전하게 주행할 수 있다는 데이터가 나왔습니다. 완전 자율주행의 시대가 생각보다 빨리 올 것입니다.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 3: Neuralink Progress -->
+                            <div class="feed-card">
+                                <div class="feed-section">
+                                    <div class="feed-header">
+                                        <div class="fead-profile">
+                                            <div class="feed-profile-container">
+                                                <div class="feed-profile-wrapper">
+                                                    <img src="https://i.pravatar.cc/150?img=12" alt="Elon Musk">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="feed-header-info">
+                                            <div class="feed-header-info-wrapper">
+                                                <div class="feed-header-info-name-section">
+                                                    <div class="feed-header-info-name-wrapper">
+                                                        <div class="feed-header-info-name">
+                                                            <p class="name-tag">Elon Musk</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="feed-header-info-date-section">
+                                                    <p class="feed-user-stack">CEO at Tesla & SpaceX</p>
+                                                    <p class="feed-user-post-time">1일전</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="feed-content-container">
+                                        <div class="feed-content-wrapper">
+                                            <div class="feed-content-text-section">
+                                                <div class="feed-content-text-wrapper">
+                                                    <span>Neuralink의 최신 임상 시험 결과가 매우 고무적입니다. 뇌-컴퓨터 인터페이스 기술을 통해 마비 환자들이 생각만으로 디지털 기기를 제어할 수 있게 되었습니다. 인간의 능력을 확장하는 새로운 시대가 열리고 있습니다.</span>
+                                                </div>
+                                            </div>
+                                            <div class="feed-content-image-container">
+                                                <div class="feed-content-image-wrapper">
+                                                    <div class="feed-content-image-section">
+                                                        <div class="feed-content-image-box">
+                                                            <img class="feed-content-image" src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=800&fit=crop" alt="Neuralink">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 4: Sustainable Energy -->
+                            <div class="feed-card">
+                                <div class="feed-section">
+                                    <div class="feed-header">
+                                        <div class="fead-profile">
+                                            <div class="feed-profile-container">
+                                                <div class="feed-profile-wrapper">
+                                                    <img src="https://i.pravatar.cc/150?img=12" alt="Elon Musk">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="feed-header-info">
+                                            <div class="feed-header-info-wrapper">
+                                                <div class="feed-header-info-name-section">
+                                                    <div class="feed-header-info-name-wrapper">
+                                                        <div class="feed-header-info-name">
+                                                            <p class="name-tag">Elon Musk</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="feed-header-info-date-section">
+                                                    <p class="feed-user-stack">CEO at Tesla & SpaceX</p>
+                                                    <p class="feed-user-post-time">2일전</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="feed-content-container">
+                                        <div class="feed-content-wrapper">
+                                            <div class="feed-content-text-section">
+                                                <div class="feed-content-text-wrapper">
+                                                    <span>전 세계가 지속 가능한 에너지로 전환하는 것은 선택이 아닌 필수입니다. Tesla의 솔라 패널과 Powerwall 배터리 시스템을 통해 가정과 기업이 완전한 에너지 자립을 실현할 수 있습니다. 기후 변화에 대응하는 우리의 행동이 지금 당장 필요합니다.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Career Section for "커리어" Tab -->
+                    <div class="user-content-inner-wrap" data-tab="career">
                         <div class="user-content-div-wrap">
                             <div class="user-content-ai-wrap">
                                 <div class="user-content-ai-inner-wrap">

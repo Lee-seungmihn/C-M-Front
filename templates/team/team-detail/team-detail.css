@@ -1176,29 +1176,35 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 0; /* Remove gap, use borders instead */
 }
 
 .feed-card {
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid #e8ecf0;
-    transition: box-shadow 0.2s ease;
+    border-bottom: 1px solid #e8ecf0; /* Add divider between cards */
 }
 
-.feed-card:hover {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+.feed-card:first-child {
+    border-radius: 0 0 0 0; /* First card has no top radius */
 }
+
+.feed-card:last-child {
+    border-radius: 0 0 12px 12px; /* Last card has bottom radius */
+    border-bottom: none; /* Remove border from last card */
+}
+
+/* Hover effect removed */
 
 .feed-section {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding: 20px;
+    gap: 2px; /* Reduced gap for tighter layout */
+    padding: 32px; /* Match content-card padding */
     width: 100%;
 }
 
@@ -1208,10 +1214,13 @@ body {
     align-items: flex-start;
     gap: 12px;
     width: 100%;
+    margin-bottom: -12px; /* Force content to move up */
 }
 
 .fead-profile {
     flex-shrink: 0;
+    margin-top: -4px; /* Move profile up slightly */
+    margin-left: -4px; /* Move profile left slightly */
 }
 
 .feed-profile-container {
@@ -1240,9 +1249,7 @@ body {
     transition: transform 0.2s ease;
 }
 
-.feed-profile-wrapper img:hover {
-    transform: scale(1.05);
-}
+/* Hover effect removed */
 
 .feed-header-info {
     flex: 1;
@@ -1256,7 +1263,7 @@ body {
 .feed-header-info-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0; /* Remove gap between name and date */
     flex: 1;
     min-width: 0;
 }
@@ -1265,7 +1272,8 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-    min-height: 24px;
+    min-height: 0; /* Remove min-height */
+    line-height: 1;
 }
 
 .feed-header-info-name-wrapper {
@@ -1287,10 +1295,12 @@ body {
     font-size: 15px;
     letter-spacing: -0.3px;
     font-family: var(--texts--fonts--body);
-    line-height: 20px;
+    line-height: 1; /* Tight line height */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
 }
 
 .name-tag:hover {
@@ -1302,6 +1312,9 @@ body {
     align-items: center;
     gap: 6px;
     flex-wrap: wrap;
+    line-height: 1; /* Tight line height */
+    margin: 0;
+    padding: 0;
 }
 
 .feed-user-stack {
@@ -1310,7 +1323,9 @@ body {
     font-size: 13px;
     letter-spacing: -0.26px;
     font-family: var(--texts--fonts--body);
-    line-height: 18px;
+    line-height: 1; /* Tight line height */
+    margin: 0;
+    padding: 0;
 }
 
 .feed-user-post-time {
@@ -1333,13 +1348,13 @@ body {
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    margin-top: 4px;
+    margin-top: 0; /* Remove margin to bring content closer */
 }
 
 .feed-content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 12px; /* Gap between text and image */
     width: 100%;
 }
 
@@ -1348,6 +1363,8 @@ body {
     flex-direction: column;
     gap: 6px;
     width: 100%;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 /* Text only - show more lines */
@@ -1363,8 +1380,10 @@ body {
     font-size: 14px;
     letter-spacing: 0;
     font-family: var(--texts--fonts--body);
-    line-height: 20px;
+    line-height: 1.4; /* Tighter line height */
     word-break: break-word;
+    margin: 0;
+    padding: 0;
 }
 
 /* When there's an image, show fewer lines */
@@ -1419,9 +1438,7 @@ body {
     transition: transform 0.2s ease;
 }
 
-.feed-content-image-section:hover {
-    transform: scale(1.01);
-}
+/* Hover effect removed */
 
 .feed-content-image-box {
     width: 100%;

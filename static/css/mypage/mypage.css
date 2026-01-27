@@ -376,20 +376,29 @@ img, video {
 .user-profile-tab-carrer-wrap {
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid transparent;
     cursor: pointer;
     display: flex;
+    padding-block: 8px;
+}
+
+.user-profile-tab-carrer-wrap.active {
+    border-bottom: 2px solid #121314;
 }
 
 .user-profile-tab-carrer-word {
     user-select: none;
     white-space: nowrap;
-    color: #121314;
+    color: #12131499;
     letter-spacing: -.3px;
     /* font-family: var(--texts--fonts--body); */
     font-size: 15px;
     font-weight: 500;
     line-height:20px;
+}
+
+.user-profile-tab-carrer-wrap.active .user-profile-tab-carrer-word {
+    color: #121314;
 }
 
 .user-profile-tab-mypost {
@@ -399,6 +408,15 @@ img, video {
     gap: 16px;
     cursor: pointer;
     display: flex;
+    border-bottom: 2px solid transparent;
+}
+
+.user-profile-tab-mypost.active {
+    border-bottom: 2px solid #121314;
+}
+
+.user-profile-tab-mypost.active .user-profile-tab-mypost-word {
+    color: #121314;
 }
 
 .user-profile-tab-mypost-word {
@@ -419,6 +437,15 @@ img, video {
     gap: 16px;
     cursor: pointer;
     display: flex;
+    border-bottom: 2px solid transparent;
+}
+
+.user-profile-tab-save-wrap.active {
+    border-bottom: 2px solid #121314;
+}
+
+.user-profile-tab-save-wrap.active .user-profile-tab-mypost-word {
+    color: #121314;
 }
 
 .user-content-wrap {
@@ -1082,17 +1109,32 @@ img, video {
 
 /* 1. 공통 스타일 (Base) */
 .library-logo-base {
-    /* opacity: 0;
-    margin-top: -24px;
-    margin-left: -24px; */
-    /* left: 50%; */
-    /* top: 50%; */
-    /* justify-content: center;
-    align-items: center; */
-    /* transition: all .6s cubic-bezier(.4, 0, .2, 1); */
-    /* transform-origin: center;
-    position: absolute;
-    display: flex; */
+    filter: grayscale(100%);
+    opacity: 0.4;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* Center logo - full color */
+.library-logo-base.center {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Side logos - slight gray */
+.library-logo-base.side {
+    filter: grayscale(80%);
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+/* Far logos - more gray */
+.library-logo-base.far {
+    filter: grayscale(100%);
+    opacity: 0.4;
+    transform: scale(0.8);
 }
 
 /* .library-logo1 {
@@ -1395,4 +1437,300 @@ img, video {
     transition: transform .15s cubic-bezier(.68, -.55, .265, 1.55);
     display: inline-flex;
     color: #12131499;
+}
+
+/* ===== FEED SECTION STYLES ===== */
+
+/* Feed Container Styles */
+.feed-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.feed-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Remove gap, use borders instead */
+}
+
+.feed-card {
+    background: #ffffff;
+    border-radius: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-bottom: 1px solid #e8ecf0; /* Add divider between cards */
+}
+
+.feed-card:first-child {
+    border-radius: 0 0 0 0; /* First card has no top radius */
+}
+
+.feed-card:last-child {
+    border-radius: 0 0 12px 12px; /* Last card has bottom radius */
+    border-bottom: none; /* Remove border from last card */
+}
+
+/* Hover effect removed */
+
+.feed-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* Reduced gap for tighter layout */
+    padding: 32px; /* Match content-card padding */
+    width: 100%;
+}
+
+/* Feed Header */
+.feed-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: -12px; /* Force content to move up */
+}
+
+.fead-profile {
+    flex-shrink: 0;
+    margin-top: -4px; /* Move profile up slightly */
+    margin-left: -4px; /* Move profile left slightly */
+}
+
+.feed-profile-container {
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+    position: relative;
+}
+
+.feed-profile-wrapper {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.feed-profile-wrapper img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect removed */
+
+.feed-header-info {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.feed-header-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Remove gap between name and date */
+    flex: 1;
+    min-width: 0;
+}
+
+.feed-header-info-name-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 0; /* Remove min-height */
+    line-height: 1;
+}
+
+.feed-header-info-name-wrapper {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.feed-header-info-name {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.name-tag {
+    color: #121314;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    font-family: var(--texts--fonts--body);
+    line-height: 1; /* Tight line height */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+}
+
+.name-tag:hover {
+    text-decoration: underline;
+}
+
+.feed-header-info-date-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    line-height: 1; /* Tight line height */
+    margin: 0;
+    padding: 0;
+}
+
+.feed-user-stack {
+    color: #64748b;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: -0.26px;
+    font-family: var(--texts--fonts--body);
+    line-height: 1; /* Tight line height */
+    margin: 0;
+    padding: 0;
+}
+
+.feed-user-post-time {
+    color: #94a3b8;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    font-family: var(--texts--fonts--body);
+    line-height: 18px;
+}
+
+.feed-user-post-time::before {
+    content: "· ";
+    color: #94a3b8;
+    margin-right: 2px;
+}
+
+.feed-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 0; /* Remove margin to bring content closer */
+}
+
+.feed-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Gap between text and image */
+    width: 100%;
+}
+
+.feed-content-text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* Text only - show more lines */
+.feed-content-text-wrapper {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    white-space: pre-line;
+    color: #121314;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0;
+    font-family: var(--texts--fonts--body);
+    line-height: 1.4; /* Tighter line height */
+    word-break: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+/* When there's an image, show fewer lines */
+.feed-content-image-container ~ .feed-content-text-section .feed-content-text-wrapper,
+.feed-content-wrapper:has(.feed-content-image-container) .feed-content-text-wrapper {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+.feed-content-text-wrapper.expanded {
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    max-height: none;
+}
+
+.feed-content-seemore {
+    color: #64748b;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.28px;
+    font-family: var(--texts--fonts--body);
+    line-height: 20px;
+    display: none;
+    padding: 4px 0;
+}
+
+.feed-content-seemore:hover {
+    color: #475569;
+    text-decoration: underline;
+}
+
+.feed-content-seemore.visible {
+    display: block;
+}
+
+.feed-content-image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.feed-content-image-wrapper {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.feed-content-image-section {
+    width: 100%;
+    display: flex;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect removed */
+
+.feed-content-image-box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.feed-content-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: block;
 }

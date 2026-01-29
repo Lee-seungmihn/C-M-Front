@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="uiTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member-join</title>
+    <link rel="stylesheet" href="../../static/css/member/font.css">
+    <link rel="stylesheet" href="../../static/css/member/join.css">
+</head>
+<body>
+<style>
+
+
+</style>
+<canvas id="bgCanvas"></canvas>
+<div id="join" class="member-join">
+    <div class="member-wrap">
+        <div class="left-wrap">
+            <div class="member-logo logo-container">
+                <div class="logo-wrap">
+                    <img src="../../static/image/enterprise/logo.png" alt="로고 이미지">
+                </div>
+            </div>
+        </div>
+        <div class="right-wrap">
+            <div class="member-joinForm joinForm-container">
+                <div class="mainword-wrap">
+                    <div class="mainword">간편하게 회원가입을 해보세요</div>
+                </div>
+                <div class="join-wrap">
+                    <div class="join-group">
+                        <div class="join-group-width">
+                            <div class="join-div">
+                                <div class="email-wrap">
+                                    <div class="email-inner">
+                                        <div class="email-word">
+                                            <input placeholder="이메일을 입력하세요." class="emailwrite" type="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="phone-wrap">
+                                    <div class="phone-inner">
+                                        <div class="phone-word">
+                                            <input placeholder="폰 번호를 입력하세요." class="phonewrite" type="tel">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="password-wrap">
+                                    <div class="password-inner">
+                                        <div class="password-word">
+                                            <input placeholder="패스워드를 입력하세요." class="passwordwrite" type="password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="passwordconfirm-wrap">
+                                    <div class="passwordconfirm-inner">
+                                        <div class="passwordconfirm-word">
+                                            <input placeholder="패스워드를 다시 입력하세요." class="passwordconfirmwrite" type="password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goingwrap">
+                                    <button class="goingbutton" disabled> <!-- 활성화시 disabled를 빼주세요. -->
+                                        <span class="goingword">회원가입</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    const particleCount = 80; // 점의 개수
+    const colors = ['#62c344', '#6a6a6a'];
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2 + 1; // 크기에 변화를 주면 더 자연스러워요
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
+            // 랜덤하게 색상 배정
+            this.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            if (this.x > canvas.width) this.x = 0;
+            if (this.x < 0) this.x = canvas.width;
+            if (this.y > canvas.height) this.y = 0;
+            if (this.y < 0) this.y = canvas.height;
+        }
+
+        draw() {
+            ctx.fillStyle = this.color; // 할당된 색상으로 그리기
+            ctx.globalAlpha = 0.7; // 점은 조금 더 선명하게
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    function init() {
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+    }
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    for (let a = 0; a < particles.length; a++) {
+        for (let b = a + 1; b < particles.length; b++) { // b=a보다 b=a+1이 중복 연산을 줄입니다.
+            let dx = particles[a].x - particles[b].x;
+            let dy = particles[a].y - particles[b].y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 180) { 
+                // [꿀팁] 선의 색상을 시작점(a)의 색상을 따라가게 하거나 
+                // 두 색상이 다를 경우 중간 톤을 설정하면 더 고급스럽습니다.
+                ctx.strokeStyle = particles[a].color; 
+                ctx.globalAlpha = 1 - distance / 180; // 거리에 따른 투명도
+                ctx.lineWidth = 0.8;
+                
+                ctx.beginPath();
+                ctx.moveTo(particles[a].x, particles[a].y);
+                ctx.lineTo(particles[b].x, particles[b].y);
+                ctx.stroke();
+            }
+        }
+        particles[a].update();
+        particles[a].draw();
+    }
+    ctx.globalAlpha = 1; // 다른 그림에 영향 주지 않도록 투명도 리셋
+    requestAnimationFrame(animate);
+}
+
+    init();
+    animate();
+</script>
+</body>
+</html>

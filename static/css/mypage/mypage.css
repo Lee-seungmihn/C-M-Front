@@ -2163,7 +2163,6 @@ img, video {
 .title-container{ display: flex; align-items: center; justify-content: flex-end; width: 100%; padding: 8px; gap: 8px; }
 .title-wrap{ display: flex; align-items: center; flex: 1 0 0; gap: 6px; }
 .title-wrap span{ align-items: center; display: flex; gap: 6px; user-select: none; color: #12131499; font-size: 12px; }
-
 /* reset */
 .modal-container.type2{max-width: 800px;}
 .modal-container.type2 .modal-body{height: 100%;}
@@ -2442,7 +2441,7 @@ img, video {
 .modal-header {
     flex-shrink: 0;
     border-color: #18253d0f;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #e8ecf0;
     width: 100%;
 }
 

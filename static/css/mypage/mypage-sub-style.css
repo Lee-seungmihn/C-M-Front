@@ -1,0 +1,100 @@
+/* 이승민 작업 */
+/* util */
+.w_200{width: 200px;}
+.w_210{width: 210px;}
+.w_220{width: 220px;}
+.w_230{width: 230px;}
+.w_240{width: 240px;}
+.w_250{width: 250px;}
+/* common */
+/* 모달 부분 */
+.title-container{ display: flex; align-items: center; justify-content: flex-end; width: 100%; padding: 8px; gap: 8px; }
+.title-wrap{ display: flex; align-items: center; flex: 1 0 0; gap: 6px; }
+.title-wrap span{ align-items: center; display: flex; gap: 6px; user-select: none; color: #12131499; font-size: 12px; }
+/* reset */
+.modal-container.type2{max-width: 800px;}
+.modal-container.type2 .modal-body{height: 100%;}
+.modal-container.type3{max-width: 400px; height: auto;}
+.modal-container.type3 .modal-body{padding: 12px;}
+.user-profile.type2{color: transparent;border-radius: 4.8px;height: 32px;width: 32px;object-fit: cover;}
+.modal-sidebar.type2 {padding: 8px;}
+.tab-container {width: 100%;padding: 12px;background: none;text-align: left;letter-spacing: -.3px;border-radius: 12px;transition: background .3s, transform .3s;cursor: pointer;}
+.tab-container.active {background: #8c9fba0f;}
+.tab-container.down {transform: scale(0.975);}
+.tab-container .tab-wrap{display: flex; align-items: center; gap: 12px;}
+.icon-container .icon-wrap {font-size: 0;}
+#profile-container{display: flex;flex-direction: column;gap: 12px;}
+.profile-content > p{line-height: 16px;}
+.user-nickname{color: #121314;font-size: 15px;}
+.user-subTitle{color: #12131499;font-size: 12px;}
+.modal-detail{width: calc(100% - 240px); height: 100%; display: flex; flex-direction: column; padding: 6px 12px; box-sizing: border-box;}
+.section-container{display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; border: 1px solid #8c9fba1f; border-radius: 8px;}
+.section-container.type2{display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; border: 0; border-radius: 0;}
+.section-left{display: flex; gap: 12px;}
+.section-content{display: flex; flex-direction: column;}
+.section-content .content-head{color: #12131499;font-size: 12px; letter-spacing: -.3px;}
+.section-content .content-body{color: #121314;font-size: 13px; letter-spacing: -.3px;}
+.section-right{}
+.type2 .button{ border-radius: 7px; padding: 6px !important; cursor: pointer;}
+.type2 .button.button-gray{background: #8c9fba14;}
+.type2 .button span{color: #121314; font-size: 12px; padding: 0 4px; letter-spacing: -.3px;}
+.content-container{display: flex; align-items: center; justify-content: space-between; padding: 12px;}
+.content-container .content-left{display: flex; flex-direction: column; gap: 2px; text-align: left;}
+.content-container .content-left p:nth-child(1){color: #12131499; font-size: 12px;}
+.content-container .content-left p:nth-child(2){color: #121314; font-size: 13px;}
+.content-container .content-right .button{border: none; border-radius: 7px; padding: 6px !important;}
+.content-container .content-right .button.button-white{background: #fff;}
+.modal-detail > div:not(:first-child){margin-top: 3px;}
+.essential{font-size: 14px;font-weight: 600;color: #333;}
+.essential::after {content: '*';color: red;margin-left: 4px;}
+.none{display: none !important;}
+.type3 .modal-form{gap: 0;}
+.type3 .modal-form{padding: 12px;}
+.type3 input{width: 100%;}
+.type3 .modal-footer{justify-content: flex-end;}
+.type3 .modal-footer button{margin-right: 10px;}
+.type3 .modal-footer button:last-child{margin-right: 0px;}
+.type3 .form-group label{display: flex; flex-direction: column;}
+.type3 .form-group input{margin-top: 10px;}
+.type3 .form-group p.txt{margin-top: 3px; line-height: 1;}
+.type3 .form-group p.txt-notice{font-size: 12px;}
+.type3 .form-group p.txt-red{color: #ff0000; opacity: .8;}
+.type3 .cancel-btn {background-color: #f1f5f9;color: #64748b; border: none;padding: 0 24px;height: 44px;border-radius: 8px;font-weight: 500;font-size: 15px;cursor: pointer;display: flex;align-items: center;justify-content: center;transition: background-color 0.2s;}
+.type3 .cancel-btn:hover {background-color: #e2e8f0;color: #475569;}
+
+.explan{position: relative; width: 100%; padding: 12px 0;}
+.detail-badge {height: 100%; display: flex; flex-direction: column;}
+.detail-badge .section-container.type2{display: flex; flex-direction: column;}
+.detail-badge .section-icon{width: 80px; padding: 10px;}
+.section-textFiled{display: flex; flex-direction: column; gap: 4px;}
+.section-textFiled .textFiled-head{display: flex; gap: 8px; align-items: baseline;}
+.section-textFiled .textFiled-head p:nth-child(1){color: #121314; font-size: 24px; font-weight: 600;}
+.section-textFiled .textFiled-head p:nth-child(2){color: #12131499; font-size: 13px;}
+.request-container{width: 100%;display: flex;flex-direction: column;align-items: flex-start;gap: 12px;padding: 12px; margin-top: auto;}
+.request-wrap{position: relative; display: flex; gap: 8px; align-items: flex-start; justify-content: space-between;}
+.checkoutFiled{width: 16px;}
+.detail-badge .textFiled .text-sm{font-size: 12px; line-height: 16px;}
+.detail-badge .textFiled span{color: #12131499; font-weight: 400; letter-spacing: 0;}
+.detail-badge .content-container {padding: 12px;}
+.section-textFiled .textFiled-content{}
+.section-textFiled .textFiled-content p{color: #12131499; font-size: 13px; line-height: 18px;}
+.detail-badge .content-container .content-left{gap: 4px;}
+.detail-badge .content-container .content-left p:nth-child(1){color: #121314; font-size: 13px; font-weight: 500;}
+.detail-badge .content-container .content-left p:nth-child(2){color: #12131499; font-size: 12px;}
+
+.section_line{width: calc(100% + 24px); height: 1px; background: #e8ecf0; margin-left: -12px; margin: 8px 0 8px -12px;}
+
+.button.button-sm{height: 32px;min-height: 32px;font-size: 14px;font-weight: 400;line-height: 1.5}
+.button.button-md{height: 40px;min-height: 40px;font-size: 14px;font-weight: 400;line-height: 1.5}
+.button.button-lg{height: 48px;min-height: 48px;font-size: 16px;font-weight: 400;line-height: 1.5; border-radius: 12px;}
+.button.button-lg span{font-size: 15px;}
+.button.button-xl{height: 56px;min-height: 56px;font-size: 18px;font-weight: 400;line-height: 1.5}
+.button.button-contain{width: 100%;}
+.button.button-black{background: #121314; color: white;}
+.button.button-black span{color: white;}
+
+.detail-history{display: flex;flex-direction: column;height: 100%;}
+.detail-history .modal-form{padding: 23px 28px;}
+
+.detail-history .save-btn.fixed_right {margin-left: auto;}
+.detail-history .modal-footer {border: none;}
